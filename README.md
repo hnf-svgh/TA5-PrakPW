@@ -1,183 +1,168 @@
-Kalkulator Interaktif
+🧮 Kalkulator Interaktif
+
 Kalkulator web interaktif dengan fitur lengkap yang mendukung urutan operasi matematika yang benar (perkalian/pembagian sebelum penjumlahan/pengurangan).
+Dilengkapi memory (M+, M-, MR, MC), riwayat perhitungan, desain modern, dan dukungan keyboard.
 
-🚀 Fitur
-✨ Fitur Utama
-Operasi Aritmatika Dasar: Penjumlahan, pengurangan, perkalian, pembagian
+🚀 Fitur Utama
+✨ Fitur Aritmatika
 
-Urutan Operasi Matematika: Menghitung dengan urutan yang benar (× ÷ sebelum + -)
+Penjumlahan, pengurangan, perkalian, pembagian
 
-Display Ganda: Menampilkan operasi saat ini dan operasi sebelumnya
+Urutan operasi otomatis (× ÷ sebelum + -)
 
-Desain Responsif: Tampilan optimal untuk desktop dan mobile
+Display ganda: current operation & previous expression
 
-Dukungan Keyboard: Input menggunakan keyboard dan mouse
+Responsif untuk desktop dan mobile
+
+Dukungan keyboard
 
 🧮 Fitur Memory
-M+ (Memory Plus): Menambahkan nilai display ke memory
+Tombol	Fungsi
+M+	Menambah nilai display ke memory
+M-	Mengurangi memory dengan nilai display
+MR	Mengambil nilai memory ke display
+MC	Menghapus memory
 
-M- (Memory Minus): Mengurangi memory dengan nilai display
+Contoh:
 
-MR (Memory Recall): Memanggil nilai dari memory
-
-MC (Memory Clear): Menghapus nilai memory
+1000 → M+     → Memory = 1000
+500  → M-     → Memory = 500
+MR            → Display = 500
 
 📊 Fitur Tambahan
-Riwayat Perhitungan: Menyimpan 5 perhitungan terakhir
 
-Penanganan Error: Deteksi pembagian dengan nol
+Riwayat 5 perhitungan terakhir
 
-Clear Functions: C (Clear All) dan CE (Clear Entry)
+Penanganan error (pembagian dengan nol)
 
-Desain Modern: Glassmorphism design dengan animasi
+Clear All (C) dan Clear Entry (CE)
+
+Desain glassmorphism + animasi modern
 
 🎯 Cara Penggunaan
 Operasi Dasar
-Input Angka: Klik tombol angka (0-9)
 
-Operasi: Pilih operator (+, -, ×, ÷)
+Klik angka (0–9)
 
-Hasil: Tekan = atau Enter untuk mendapatkan hasil
+Pilih operator + - × ÷
 
-Contoh Perhitungan
-text
+Tekan = atau Enter untuk hasil
+
+Contoh:
+
 3 + 3 × 6 ÷ 2 = 12
-Penjelasan:
 
 3 × 6 = 18
-
 18 ÷ 2 = 9
-
 3 + 9 = 12
 
-Fungsi Memory
-javascript
-// Contoh penggunaan memory:
-1000 → M+  // Memory = 1000
-500  → M-  // Memory = 500
-MR         // Display = 500
-Keyboard Shortcuts
-Angka 0-9: Input angka
-
-Operator: +, -, *, /
-
-Enter/Equal: Menghitung hasil
-
-Escape: Clear All (C)
-
-Backspace: Clear Entry (CE)
-
-Decimal: . (titik)
-
+⌨️ Keyboard Shortcuts
+Tombol	Fungsi
+0–9	Input angka
++ - * /	Operator
+Enter	Hitung hasil
+Backspace	CE (Clear Entry)
+Escape	C (Clear All)
+.	Titik desimal
 🛠️ Teknologi
-HTML5: Struktur aplikasi
 
-CSS3: Styling dengan glassmorphism effect
+HTML5 untuk struktur
 
-JavaScript ES6: Logika kalkulator dan interaktivitas
+CSS3 (Glassmorphism + animasi)
 
-Grid Layout: Tata letak responsif
+JavaScript ES6 untuk logic
 
-Flexbox: Penyelarasan elemen
+Grid Layout & Flexbox
 
-📁 Struktur Kode
-File Structure
-text
+📁 Struktur Proyek
 calculator/
-├── index.html          # File utama
-├── README.md           # Dokumentasi
-└── (style dan script embedded)
-JavaScript Architecture
-Core Functions
-javascript
-// Evaluasi ekspresi matematika
-evaluateExpression(expression)    // Main evaluator
-tokenize(expression)             // Memecah ekspresi
-processMultiplicationDivision()  // Proses × ÷
-processAdditionSubtraction()     // Proses + -
-State Management
-javascript
-let currentOperand = '0';        // Display saat ini
-let expression = '';             // Ekspresi lengkap
-let memoryValue = 0;             // Nilai memory
-let history = [];                // Riwayat perhitungan
-Event Handlers
-javascript
-// Button events
+│── index.html     # File utama aplikasi
+│── README.md      # Dokumentasi
+└── (style & script embedded)
+
+🧠 Arsitektur JavaScript
+📌 Core Functions
+evaluateExpression(expression)       // Evaluasi ekspresi
+tokenize(expression)                // Memecah ekspresi menjadi token
+processMultiplicationDivision()     // Menangani × ÷
+processAdditionSubtraction()        // Menangani + -
+
+📌 State Management
+let currentOperand = '0';   // Display saat ini
+let expression = '';        // Ekspresi lengkap
+let memoryValue = 0;        // Nilai memory
+let history = [];           // Riwayat 5 perhitungan
+
+📌 Event Handlers
 numberButtons.addEventListener('click')
-operatorButtons.addEventListener('click') 
+operatorButtons.addEventListener('click')
 memoryButtons.addEventListener('click')
+document.addEventListener('keydown')   // Keyboard support
 
-// Keyboard support
-document.addEventListener('keydown')
-🎨 Design Features
-Visual Design
-Glassmorphism Effect: Background transparan dengan blur
+🎨 Desain & UX
+Visual
 
-Modern Color Scheme: Orange untuk operator, biru untuk memory
+Glassmorphism (blur + transparency)
 
-Smooth Animations: Hover effects dan transitions
+Warna operator: oranye
 
-Responsive Grid: Layout adaptif untuk semua device
+Warna fitur memory: biru
 
-User Experience
-Real-time Display: Update tampilan secara langsung
+Animasi hover + transition
 
-Visual Feedback: Animasi tombol saat diklik
+Pengalaman Pengguna
 
-Error Handling: Pesan error yang jelas
+Real-time display update
 
-History Panel: Akses cepat ke perhitungan sebelumnya
+Tombol animatif
+
+Error handling yang jelas
+
+Riwayat perhitungan mudah diakses
 
 🔧 Cara Menjalankan
-Download File: Simpan file HTML ke komputer
 
-Buka di Browser: Double-click file atau buka dengan browser
+Download folder atau file index.html
 
-Gunakan: Mulai menghitung!
+Buka file menggunakan browser modern
 
-Requirements
-Browser modern (Chrome, Firefox, Safari, Edge)
+Kalkulator siap digunakan
 
-JavaScript enabled
+Requirements:
 
-Resolusi minimum 320px
+Browser modern
+
+JavaScript aktif
+
+Minimal resolusi 320px
 
 📝 Contoh Penggunaan
-Kasus 1: Perhitungan Bertingkat
-text
-Input: 5 + 3 × 2
+1️⃣ Perhitungan Bertingkat
+Input : 5 + 3 × 2
 Proses: 3 × 2 = 6 → 5 + 6
-Hasil: 11
-Kasus 2: Menggunakan Memory
-text
-Steps:
-1. 1000 → M+ (Memory = 1000)
-2. 250 → M+ (Memory = 1250) 
-3. 500 → M- (Memory = 750)
-4. MR → Display 750
-Kasus 3: Complex Calculation
-text
-Input: 10 + 2 × 5 - 8 ÷ 4
-Proses: 
-  2 × 5 = 10
-  8 ÷ 4 = 2  
-  10 + 10 - 2
-Hasil: 18
+Hasil : 11
+
+2️⃣ Memory
+1000 → M+  → Memory = 1000
+250  → M+  → Memory = 1250
+500  → M-  → Memory = 750
+MR         → Display = 750
+
+3️⃣ Perhitungan Kompleks
+Input : 10 + 2 × 5 - 8 ÷ 4
+Proses: 2 × 5 = 10
+        8 ÷ 4 = 2
+        10 + 10 - 2
+Hasil : 18
+
 🐛 Troubleshooting
 Masalah Umum
-Hasil Tidak Sesuai: Pastikan urutan operasi matematika
+Masalah	Penyebab	Solusi
+Hasil tidak sesuai	Salah urutan operasi	Periksa ekspresi
+Keyboard tidak berfungsi	Halaman tidak fokus	Klik area kalkulator
+Display error	Ekspresi tidak valid	Tekan C
+Pesan Error
 
-Keyboard Tidak Berfungsi: Pastikan fokus pada halaman
+"Error: Division by zero" → Pembagian oleh 0
 
-Display Error: Gunakan C untuk reset kalkulator
-
-Error Messages
-"Error: Division by zero": Pembagian dengan angka 0
-
-"Error": Ekspresi matematika tidak valid
-
-
-
-Tips: Gunakan tombol C untuk mereset kalkulator sepenuhnya, dan CE hanya untuk menghapus input saat ini.
-
+"Error" → Ekspresi tidak valid
