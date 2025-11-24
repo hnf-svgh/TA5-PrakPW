@@ -72,9 +72,7 @@ MR → Display = 500
 
 ## 🛠️ Teknologi
 
-- **HTML5** (structure)  
-- **CSS3** (glassmorphism, animation)  
-- **JavaScript ES6** (logic)  
-- **Grid Layout** & **Flexbox**  
-
+- **HTML** (structure)  
+- **CSS** (glassmorphism, animation)  
+- **JavaScript** (logic)  
 ---
